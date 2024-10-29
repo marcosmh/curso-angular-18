@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'curso-angular-4';
+  title = 'Curso de Angular 18 con Angular CLI.';
 }

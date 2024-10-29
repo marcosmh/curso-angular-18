@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.bordeAzul {
+    border: 6px solid lightblue !important;
+}
+
+.fondoAzul {
+    background: lightblue !important;
+}
+
+.fondoVerde {
+    background: lightgreen;
+}
+
+.letraGrande {
+    font-size: 20px;
+}
+
+.activado {
+    font-weight: bold;
+    background: yellow;
+}
