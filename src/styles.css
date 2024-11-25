@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+#content {
+    margin-top: 30px;
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0px 2px 5px #ccc;
+    padding: 0px;
+    overflow: hidden;
+    margin-left: 60px;
+}
+
+#header {
+    background: #E03137;
+    color: white;
+    margin: 0px;
+    height: 90px;
+    line-height: 90px;
+
+}
+
+#header h1 {
+    display: block;
+    line-height: 90px;
+}
+
+#menu {
+    padding: 0px;
+    margin: 0px;
+    background: rgba(224, 49, 55, 0.67);
+}
+
+#menu ul{
+    margin: 0px;
+    list-style: none;
+    padding-left: 10px;
+}
+
+#menu ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+#menu ul li a {
+    display: block;
+    color: #E03137;
+    height: 30px;
+    line-height: 25px;
+}
+
+#menu ul li a a:hover {
+    text-decoration: none;
+    background: #E03137;
+}
+
+#pie {
+    margin-top: 50px;
+    padding-top: 10px;
+    color: gray;
+}
