@@ -1,22 +1,26 @@
 
-<div id="content" class="col-lg-10 col-lg-offset-1">
-  <header id="header" class="col-log-12">
+<div id="content" class="col col-lg-10 col-lg-offset-1">
+
+  <header id="header" class="col col-lg-12">
     <h1>{{ title }}</h1>
   </header>
-  <nav id="menu" class="col-log-12">
+
+  <nav id="menu" class="col col-lg-12">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Crear Productos</a></li>
+      <li><a [routerLink]="['/']" [routerLinkActive]="['activado']">Home</a></li>
+      <li><a [routerLink]="['/productos']" [routerLinkActive]="['activado']">Productos</a></li>
+      <li><a [routerLink]="['/crear-productos']" [routerLinkActive]="['activado']">Crear Productos</a></li>
     </ul>
   </nav>
-  <section id="main" class="col-log-12">
+
+  <section id="main" class="col col-lg-12">
     <!-- componente actual -->
     <br/><br/>
-    <home></home>
+    <router-outlet />
     <br/>
   </section>
-  <footer id="pie" class="col-log-12">
+
+  <footer id="pie" class="col col-lg-12">
     <p> Angular 4 WebApp 2024</p>
   </footer>
 
@@ -24,9 +28,3 @@
 </div>
 
 
-
-
-    
-
-
-<router-outlet />
