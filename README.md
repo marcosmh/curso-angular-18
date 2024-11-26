@@ -29,7 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ---------------
 
 ### Crear proyecto
-* ng new curso-angular18-webapp
+* ng new curso-angular18-webapp --standalone=false
 
 ### Instalar Bootstrap
 npm i bootstrap@5.3.3
