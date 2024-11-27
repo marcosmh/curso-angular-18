@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GLOBAL } from './services/global';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Webapp de Productos con Angular 18';
+  public title = 'Webapp de Productos con Angular 18';
+  public header_color: string;
+
+  constructor() {
+    this.header_color = GLOBAL.header_color;
+  }
 }
