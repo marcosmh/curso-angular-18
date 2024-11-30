@@ -79,3 +79,12 @@
 #t_error{
     color: #E03137;
 }
+
+.error{
+    color: #E03137;
+}
+
+#form-producto label {
+    margin-top: 10px;
+}
+

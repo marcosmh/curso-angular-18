@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { map } from "rxjs/internal/operators/map";
-import { Observable } from "rxjs";
+import { catchError, Observable, throwError } from "rxjs";
 import { Producto } from "../models/producto";
 import { GLOBAL } from "./global";
 
@@ -30,6 +30,47 @@ export class ProductoService {
                     console.log(response);
                     return response;
                 }));
+    }
+
+
+    addProducto(producto: Producto) {
+        let json = JSON.stringify(producto);
+        let params = 'json='+json;
+        let headers = new HttpHeaders({
+            'Content-type':'application/json'
+        });
+    
+        /*
+         * otro metodo para guardar
+         * : Observable<any> 
+
+        return this._http.post(this.url+'productos',params,{ headers:headers })
+            .pipe(
+                response => {
+                console.log("Servicio Producto: ",response);
+                return response;
+            });
+        */
+        
+            
+        return this._http.post<Producto>(this.url+'productos', json, { headers })
+            .pipe(
+              map(response => {
+                console.log("El Producto se ha guardado correctamente:", response);
+                return response;
+              }),
+              catchError(error => {
+                console.log("Error al guardar el  producto: ", error);
+                return error;
+              })
+            );
+            /*.subscribe();*/
+            
+            
+
+
+
+
     }
 
 }

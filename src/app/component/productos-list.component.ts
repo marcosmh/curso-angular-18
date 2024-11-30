@@ -23,8 +23,6 @@ export class ProductosListComponent {
 
     ngOnInit() {
         console.log('productos-list.component.ts cargado.');
-
-        //console.log(this._productoService.getProductos());
         this.listadoProductos();
     }
 
