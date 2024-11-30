@@ -35,24 +35,10 @@ export class ProductoService {
 
     addProducto(producto: Producto) {
         let json = JSON.stringify(producto);
-        let params = 'json='+json;
         let headers = new HttpHeaders({
             'Content-type':'application/json'
         });
-    
-        /*
-         * otro metodo para guardar
-         * : Observable<any> 
-
-        return this._http.post(this.url+'productos',params,{ headers:headers })
-            .pipe(
-                response => {
-                console.log("Servicio Producto: ",response);
-                return response;
-            });
-        */
         
-            
         return this._http.post<Producto>(this.url+'productos', json, { headers })
             .pipe(
               map(response => {
@@ -64,13 +50,6 @@ export class ProductoService {
                 return error;
               })
             );
-            /*.subscribe();*/
-            
-            
-
-
-
-
     }
 
 }
