@@ -34,7 +34,7 @@ export class ProductoAddComponent {
         this._productoService.addProducto(this.producto).subscribe(
             response => {
                 console.log("Respuesta: ",JSON.stringify(response));
-                this._router.navigate(['/home']);
+                this._router.navigate(['/productos']);
             }, 
             error => {
                 console.log(<any>error);
