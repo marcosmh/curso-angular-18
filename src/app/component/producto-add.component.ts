@@ -16,6 +16,8 @@ import { GLOBAL } from "../services/global";
 export class ProductoAddComponent {
     public titulo: string;
     public producto: Producto;
+    public filesToUpload: any;
+    public resultUpload: any;
     
 
     constructor(
@@ -64,7 +66,8 @@ export class ProductoAddComponent {
     saveImagen(id: number) {
                 this._productoService.makeFileRequest(GLOBAL.url+"uploads/"+id,[],this.filesToUpload)
                     .then(  (result) => {
-                        JSON.stringify(result);
+                        this.resultUpload = result;
+                        console.log(this.resultUpload.filename);
                     },
                     (error) => {
                         console.log(error);
@@ -72,9 +75,7 @@ export class ProductoAddComponent {
                 );
     }
 
-    public filesToUpload: any;
-    public resultUpload: any;
-
+    
     fileChangeEvent(fileInput: any) {
         this.filesToUpload = <Array<File>>fileInput.target.files;
         console.log(this.filesToUpload);
