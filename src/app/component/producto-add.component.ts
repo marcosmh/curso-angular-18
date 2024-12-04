@@ -62,10 +62,8 @@ export class ProductoAddComponent {
     }
 
     saveImagen(id: number) {
-        console.log("Upload Imagen..... ",GLOBAL.url+"uploads/"+id);
                 this._productoService.makeFileRequest(GLOBAL.url+"uploads/"+id,[],this.filesToUpload)
                     .then(  (result) => {
-                        console.log('Upload Imagen [OK]');
                         JSON.stringify(result);
                     },
                     (error) => {
