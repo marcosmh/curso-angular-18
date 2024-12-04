@@ -37,7 +37,7 @@
 
     <div class="mb-3">
         <label class="form-label">Imagén: </label>
-        <input type="file" name="imagen" #imagen="ngModel" [(ngModel)]="producto.imagen" class="form-control"/>
+        <input type="file" name="imagen" (change)="fileChangeEvent($event)" #imagen="ngModel" [(ngModel)]="producto.imagen" class="form-control"/>
     </div>
 
     <br/>
