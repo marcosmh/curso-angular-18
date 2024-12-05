@@ -5,12 +5,14 @@ import { HomeComponent } from './component/home.component';
 import { ErrorComponent } from './component/error.component';
 import { ProductosListComponent } from './component/productos-list.component';
 import { ProductoAddComponent } from './component/producto-add.component';
+import { ProductoDetailComponent } from './component/producto-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'productos', component: ProductosListComponent },
   { path: 'crear-producto', component: ProductoAddComponent },
+  { path: 'producto/:id', component: ProductoDetailComponent },
   { path: '**', component: ErrorComponent }
   
 ];

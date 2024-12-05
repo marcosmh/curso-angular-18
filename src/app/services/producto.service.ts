@@ -18,6 +18,7 @@ export class ProductoService {
 
     
     getProductos(): Observable<any> {
+        console.log("getProductos: ");
         console.log(
             this._http.get<any>(this.url+'productos').subscribe(
                 result => { console.log(result) },
@@ -32,8 +33,19 @@ export class ProductoService {
                 }));
     }
 
+    getProducto(id: number): Observable<any> {
+        console.log("servive: getProducto: ", id);
+        return this._http.get<any>(this.url+'productos/'+id).pipe(
+            map(response => {
+                JSON.stringify(response);
+                return response;
+            }));
+
+    }
+
 
     addProducto(producto: Producto) {
+        console.log("addProducto: ");
         let json = JSON.stringify(producto);
         let headers = new HttpHeaders({
             'Content-type':'application/json'

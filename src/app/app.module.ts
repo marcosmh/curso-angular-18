@@ -12,6 +12,7 @@ import { HomeComponent } from './component/home.component';
 import { ErrorComponent } from './component/error.component';
 import { ProductosListComponent } from './component/productos-list.component';
 import { ProductoAddComponent } from './component/producto-add.component';
+import { ProductoDetailComponent } from './component/producto-detail.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ProductoAddComponent } from './component/producto-add.component';
     ErrorComponent,
     HomeComponent,
     ProductosListComponent,
-    ProductoAddComponent
+    ProductoAddComponent,
+    ProductoDetailComponent
   ],
   imports: [
     BrowserModule,
