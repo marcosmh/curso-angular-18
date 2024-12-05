@@ -43,7 +43,6 @@ export class ProductoService {
 
     }
 
-
     addProducto(producto: Producto) {
         console.log("addProducto: ");
         let json = JSON.stringify(producto);
@@ -63,6 +62,27 @@ export class ProductoService {
               })
             );
     }
+
+    editProducto(id: number,producto: Producto) {
+        console.log("service::editProducto: ", id);
+        let json = JSON.stringify(producto);
+        let headers = new HttpHeaders({
+            'Content-type':'application/json'
+        });
+
+        return this._http.put<Producto>(this.url+'productos/'+id, json, { headers })
+            .pipe(
+              map(response => {
+                console.log("El Producto se ha editado correctamente:", response);
+                return response;
+              })
+              ,catchError(error => {
+                console.log("Error al editar el  producto: ", error);
+                return (error);
+              })
+            );
+    }
+
 
     makeFileRequest(url: string, params: Array<string>, files: Array<File>) {
         return new Promise( (resolve, reject) => {

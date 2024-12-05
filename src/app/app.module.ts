@@ -13,6 +13,7 @@ import { ErrorComponent } from './component/error.component';
 import { ProductosListComponent } from './component/productos-list.component';
 import { ProductoAddComponent } from './component/producto-add.component';
 import { ProductoDetailComponent } from './component/producto-detail.component';
+import { ProductoEditComponent } from './component/producto-edit.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProductoDetailComponent } from './component/producto-detail.component';
     HomeComponent,
     ProductosListComponent,
     ProductoAddComponent,
-    ProductoDetailComponent
+    ProductoDetailComponent,
+    ProductoEditComponent
   ],
   imports: [
     BrowserModule,

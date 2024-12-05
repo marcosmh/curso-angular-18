@@ -38,6 +38,10 @@
     <div class="mb-3">
         <label class="form-label">Imagén: </label>
         <input type="file" name="imagen" (change)="fileChangeEvent($event)" #imagen="ngModel" [(ngModel)]="producto.imagen" class="form-control"/>
+        <div *ngIf="is_edit">
+            <img class="img-thumbnail producto_imagen" style="width:80px; heigth:80px" 
+                src="http://127.0.0.1:5000/static/img/ps4.jpg"  />
+        </div>
     </div>
 
     <br/>
