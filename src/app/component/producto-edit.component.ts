@@ -47,10 +47,6 @@ export class ProductoEditComponent {
     onSubmit() {
         console.log('Component: editar producto.');
         let id = this.getId();
-        /*let id: number = 0;
-        this._route.params.forEach( (params: Params) => {
-            id = params['id'];
-        });*/
         console.log("id: ", id);
 
         this._productoService.editProducto(id,this.producto).subscribe(

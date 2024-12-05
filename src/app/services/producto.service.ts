@@ -83,6 +83,22 @@ export class ProductoService {
             );
     }
 
+    deleteProducto(id: number) {
+        console.log("service::deleteProducto: ", id);
+       
+        return this._http.delete(this.url+'productos/'+id)
+        .pipe(
+            map(response => {
+              console.log("El Producto se ha eliminado correctamente:", response);
+              return response;
+            })
+            ,catchError(error => {
+              console.log("Error al eliminar el  producto: ", error);
+              return (error);
+            })
+          );
+    } 
+
 
     makeFileRequest(url: string, params: Array<string>, files: Array<File>) {
         return new Promise( (resolve, reject) => {
